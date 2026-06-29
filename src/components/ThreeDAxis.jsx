@@ -9,6 +9,7 @@ export function ThreeDAxis(props) {
     <group ref={group} {...props} dispose={null}>
       <group name="defaultScene">
         <group>
+            
           <mesh
             name="x_axis"
             geometry={new THREE.BoxGeometry( 10, 0.1, 0.1 )}

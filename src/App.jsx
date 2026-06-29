@@ -13,26 +13,18 @@ import { CameraSetup } from './components/CameraSetup'
 
 function App() {
   const controlsRef = useRef(null)
-  const RBLXCharRef = useRef(null)
-  const ThreeDAxisRef = useRef(null)
 
   return (
-    <>
       <Canvas>
         <CameraSetup controlsRef={controlsRef} />
         <Suspense fallback={null}>
           <Stage controls={controlsRef}>
-            {/* <group ref={RBLXCharRef}>
-              <RBLXCharacter />
-            </group> */}
-            <group ref={ThreeDAxisRef}>
-              <ThreeDAxis />
-            </group>
+            <RBLXCharacter position={[0, 0, 0]} />
+            <ThreeDAxis />
           </Stage>
         </Suspense>
         <OrbitControls ref={controlsRef} />
       </Canvas>
-    </>
   )
 }
 
